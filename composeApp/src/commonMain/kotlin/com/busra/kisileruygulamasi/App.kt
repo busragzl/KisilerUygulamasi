@@ -14,6 +14,8 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.busra.kisileruygulamasi.ui.screen.SayfaGecisleri
+
 import org.jetbrains.compose.resources.painterResource
 
 import kisileruygulamasi.composeapp.generated.resources.Res
@@ -23,6 +25,8 @@ import kisileruygulamasi.composeapp.generated.resources.compose_multiplatform
 @Preview
 fun App() {
     MaterialTheme {
+        SayfaGecisleri()
+
 
     }
 }
