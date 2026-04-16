@@ -15,10 +15,10 @@ fun SayfaGecisleri(){
     val navController = rememberNavController()
     NavHost(navController = navController, startDestination = "anasayfa"){
         composable("anasayfa") {
-            Anasayfa(navController)
+            Anasayfa(navController= navController)
         }
         composable("kisikayitsayfa") {
-            KisiKayitSayfa(navController)
+            KisiKayitSayfa(navController= navController)
         }
         composable("kisidetaysayfa/{kisi}",
             arguments = listOf(
@@ -26,7 +26,7 @@ fun SayfaGecisleri(){
             )) {
             val json = it.arguments?.getString("kisi")!!
             val nesne = Json.decodeFromString<Kisiler>(json)
-            KisiDetaySayfa(navController, gelenKisi = nesne)
+            KisiDetaySayfa(navController= navController, gelenKisi = nesne)
         }
     }
 
